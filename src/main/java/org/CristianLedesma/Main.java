@@ -39,9 +39,8 @@ public class Main {
                 System.out.println("Ingresa la cantidad a convertir: ");
                 valorConvertir = scanner.nextInt();
                 URL = "https://v6.exchangerate-api.com/v6/b8098c934cbd5fbc87f490ff/pair/";
-            } else if (opcionUser == 12) {
-                iniciarPrograma = false;
-            } else {
+            }
+             else {
                 System.out.println("Opción no válida. Por favor, elija una opción del menú.");
             }
 
@@ -80,6 +79,7 @@ public class Main {
                     URL += "CNY/USD/" + valorConvertir;
                     break;
                 case 12:
+                    iniciarPrograma = false;
                     break;
                 default:
                     System.out.println("Opción no válida. Por favor, elija una opción del menú.");
