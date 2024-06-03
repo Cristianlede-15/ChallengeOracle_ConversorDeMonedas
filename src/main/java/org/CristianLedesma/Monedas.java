@@ -12,8 +12,7 @@ public class Monedas {
     @SerializedName("conversion_result")
     public double resultado;
 
-    public void datos(int cantidad){
-        System.out.println("1[" + valorPartida + "] es igual a " + conversion + "[" + valorllegada + "]");
-        System.out.println("La conversión de " + cantidad + "[" + valorPartida + "] a [" + valorllegada + "] es de " + resultado + "[" + valorllegada + "]");
+    public void formatearDatos(int cantidad){
+        System.out.println("El resultado de la conversacion es: " + resultado);
     }
 }

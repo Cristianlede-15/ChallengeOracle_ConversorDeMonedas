@@ -80,28 +80,14 @@ public class Main {
                     URL += "CNY/USD/" + valorConvertir;
                     break;
                 case 12:
-                    // No es necesario hacer nada aquí ya que el programa terminará en el siguiente ciclo del bucle.
                     break;
                 default:
                     System.out.println("Opción no válida. Por favor, elija una opción del menú.");
                     break;
             }
-
-            if(opcionUser >= 1 && opcionUser <= 11) {
-                solicitudConversion(URL);
-            }
-
+            Conversion.solicitudConversion(URL, valorConvertir);
         } while(iniciarPrograma);
     }
 
-    public static void solicitudConversion(String URL) throws IOException, InterruptedException {
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(URL))
-                .build();
 
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-
-        System.out.println(response.body());
-    }
 }

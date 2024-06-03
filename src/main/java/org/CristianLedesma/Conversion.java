@@ -20,6 +20,6 @@ public class Conversion {
 
         Gson gson = new Gson();
         Monedas moneda = gson.fromJson(json, Monedas.class);
-        moneda.datos(valorConvertir);
+        moneda.formatearDatos(valorConvertir);
     }
 }
